@@ -1,0 +1,92 @@
+
+/*
+ * 页面通用样式
+*/
+
+// 不换行
+no-wrap()
+  text-overflow: ellipsis
+  overflow: hidden
+  white-space: nowrap
+fixed()
+  position fixed
+relative()
+  position relative
+absolute()
+  position absolute
+
+// 颜色
+$color-background = #fff
+$color-base = #343d50
+$color-text = #333333
+$color-light = #39aafb
+
+// 字体
+$small-font = 12px
+$normal-font = 14px
+$large-font = 16px
+
+//图片
+
+// 页面跳转动画
+.slide-enter-active, .slide-leave-active
+  transition: all 0.3s
+.slide-enter, .slide-leave-to
+  transform: translate3d(100%, 0, 0)
+
+.fade-enter-active, .fade-leave-active
+  transition-property: opacity;
+  transition-duration: .25s;
+.fade-enter-active
+  transition-delay: .25s;
+.fade-enter, .fade-leave-active
+  opacity: 0
+
+.popup-enter-active, .popup-leave-active
+  transition: all 0.1s
+.popup-enter, .popup-leave-to
+  transform: translate3d(0,100%,0)
+
+//圆角
+border-radius()
+  -webkit-border-radius arguments
+  -moz-border-radius arguments
+  border-radius arguments
+
+//页面
+fullpage()
+  min-height calc(100vh - 150px)
+  background #fff
+
+// 副标题
+.page-sub-title
+  position relative
+  height 49px
+  padding-left 12px
+  line-height 49px
+  color $color-text
+  font-size $normal-font
+  font-weight bold
+  border-bottom 1px solid #eaeaea
+  &:before
+    content: ''
+    position absolute
+    left 0
+    top 50%
+    width 2px
+    height 20px
+    margin-top -10px
+    background #0e77e3
+  .link-btn
+    position absolute
+    right 0
+    top 0
+    width 40px
+    height 40px
+    padding-right 10px
+    line-height 40px
+    text-align right
+    cursor pointer
+    .icon-right
+      font-size 15px
+      color #0e77e3
